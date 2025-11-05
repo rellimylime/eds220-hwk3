@@ -1,5 +1,5 @@
 ,county,n_spills
-0,Albany,205
+0,Albany,206
 1,Allegany,30
 2,Bronx,143
 3,Broome,75
@@ -12,11 +12,11 @@
 10,Columbia,60
 11,Cortland,35
 12,Delaware,41
-13,Dutchess,158
+13,Dutchess,159
 14,Erie,283
 15,Essex,57
-16,Franklin,44
-17,Fulton,33
+16,Franklin,46
+17,Fulton,32
 18,Genesee,51
 19,Greene,39
 20,Hamilton,11
@@ -30,9 +30,9 @@
 28,Montgomery,62
 29,Nassau,576
 30,New Jersey - Region 2,6
-31,New York,174
+31,New York,175
 32,Niagara,88
-33,Oneida,108
+33,Oneida,109
 34,Onondaga,198
 35,Ontario,67
 36,Orange,336
@@ -41,11 +41,11 @@
 39,Otsego,34
 40,Putnam,117
 41,Queens,321
-42,Rensselaer,106
+42,Rensselaer,105
 43,Richmond,52
 44,Rockland,161
-45,Saratoga,161
-46,Schenectady,77
+45,Saratoga,162
+46,Schenectady,78
 47,Schoharie,33
 48,Schuyler,11
 49,Seneca,25
@@ -56,10 +56,10 @@
 54,Tioga,28
 55,Tompkins,36
 56,Tuscarora Indian Reservation,1
-57,Ulster,161
+57,Ulster,162
 58,Warren,81
 59,Washington,96
 60,Wayne,38
-61,Westchester,743
+61,Westchester,744
 62,Wyoming,24
 63,Yates,6
