@@ -163,7 +163,7 @@ cython_debug/
 
 # Add specific data files
 data/Spill_Incidents_20251118.csv
-data/tl_2023_us_county.zip/*
+data/tl_2023_us_county.zip
 
 # VS Code
 .vscode/
