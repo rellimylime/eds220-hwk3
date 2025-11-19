@@ -1,33 +1,79 @@
-# EDS 220 - Assignment 3, task 2
+# Geospatial Analysis of Petroleum Spills in New York State
 
-This repository contains materials for the third assignment for the course [EDS 220 - Working with Environmental Datasets](https://meds-eds-220.github.io/MEDS-eds-220-course/). This course is part of the [UCSB Masters in Environmental Data Science](https://bren.ucsb.edu/masters-programs/master-environmental-data-science).
+## About
 
-## Assignment instructions
-Complete instructions for this assignment are in [the course website](https://meds-eds-220.github.io/MEDS-eds-220-course/assignments/assignment3.html).
+This repository contains a geospatial analysis examining the distribution of petroleum spill incidents across New York State counties during January-October 2023. The analysis combines environmental incident reporting data with Census Bureau geographic boundaries to create choropleth visualizations and identify spatial patterns in petroleum spills.
 
-## Notebook instructions
-The notebook `hwk3-task2-oil-spills.ipynb` has exercises for practicing geospatial data wrangling using `geopandas`. The notebook contains detailed instructions on how to complete the exercises. 
+The project demonstrates:
+- Integration of tabular incident data with geospatial boundary files
+- Data cleaning and standardization techniques for multi-source datasets
+- Geospatial data wrangling using `geopandas`
+- Professional cartographic visualization with `matplotlib`
+- Reproducible data science workflow practices
 
+This work was completed as part of EDS 220 - Working with Environmental Datasets in the UCSB Master of Environmental Data Science program.
 
-## Rubric
+## Repository Structure
 
-Please [review the rubric for these tasks](https://docs.google.com/document/d/1Ce4EO3MEHW5uLks4x8BECWlkim2bcmxB4f8Qo4z26z8/edit?usp=sharing) before starting your work. 
+```
+eds220-hwk3/
+│
+├── hwk3-task1-spills.ipynb    # Main analysis notebook
+├── data/                       # Data directory (not tracked in git)
+│   ├── Spill_Incidents_20251102.csv
+│   └── tl_2023_us_county.zip
+├── tests/                      # Grading test files
+├── README.md                   # This file
+├── LICENSE                     # Repository license
+└── .gitignore                  # Git ignore file
+```
 
-## Submission instructions
-**All tasks for this assignment should be submitted via Gradescope.** Make sure you double-check your submission to ensure it satisfies all the items in this checklist:
+## Data
 
-- File formatting and uploading:
-  - [ ] Answers for task 2 must be submitted as .ipynb files (Jupyter Notebooks) to Gradescope, *not* a PDF, html or other format.
-  - [ ] Double-check that each notebooks is uploaded to the correct task on Gradescope. 
-  - [ ] Before you upload your finished notebooks to Gradescope, please rename your notebooks so it is called `hwk3-task2-oil-spills-YOURLASTNAME.ipynb`.
-  
-- Notebook content checklists:
-  - [ ] Ensure your notebooks include a link to your assignment's GitHub repository in the designated section.
-  - [ ] The notebooks you submit must have your solutions to the exercises, They *should not be the blank template notebooks*. 
-  - [ ] The notebooks you submit must include your code *and* all required rendered plots, graphs, and printed output. Run all cells before submitting your .ipynb file and make sure all the outputs are visible.
+### Data Sources
 
-**Resubmissions after the due date due to not satisfying one of the checks above will be strictly held to the course's 50%-regrade resubmission policy (see syllabus).**
+**NYS DEC Spill Incidents Dataset**
+Incident reports of petroleum and hazardous material spills in New York State, maintained by the New York State Department of Environmental Conservation and published through the Open Data NY portal.
 
-If you have any questions, please reach out to the TA or instructor by 5 pm on the day before the assignment is due.
+**US Census TIGER/Line Shapefiles**
+County boundary polygons for the United States from the U.S. Census Bureau, providing geographic reference data for spatial analysis.
 
-Happy coding! ✨🐍✨
+### Data Access
+
+The datasets used in this analysis are **not included** in this repository due to file size constraints. To reproduce this analysis:
+
+1. **Spill Incidents Data**: Download from [Open Data NY - Spill Incidents](https://data.ny.gov/Energy-Environment/Spill-Incidents/u44d-k5fk)
+   - Save as: `data/Spill_Incidents_20251102.csv`
+
+2. **County Boundaries**: Download from [Census Bureau TIGER/Line Shapefiles](https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.2022.html#list-tab-790442341)
+   - Select "2023" year and "Counties (and equivalent)" layer type
+   - Save the zip file as: `data/tl_2023_us_county.zip`
+
+3. Create a `data/` directory in the repository root if it doesn't exist
+4. Place both files in the `data/` directory
+
+The `data/` directory is excluded from version control via `.gitignore` to prevent committing large data files.
+
+## Requirements
+
+This analysis requires Python 3.x with the following packages:
+- `pandas` - Tabular data manipulation
+- `geopandas` - Geospatial data operations
+- `matplotlib` - Visualization
+- `numpy` - Numerical operations
+
+## References
+
+New York State Department of Environmental Conservation. (2025). *Spill incidents* [Data file]. Open Data NY. Retrieved November 2, 2025, from https://data.ny.gov/Energy-Environment/Spill-Incidents/u44d-k5fk
+
+U.S. Census Bureau, Geography Division. (2023). *TIGER/Line shapefiles: 2023 counties (and equivalent)* [Data file]. Retrieved November 2, 2025, from https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.2022.html
+
+Wingate, C. (2024). *EDS 220: Working with environmental datasets* [Course materials]. Master of Environmental Data Science, Bren School of Environmental Science & Management, University of California, Santa Barbara. https://meds-eds-220.github.io/MEDS-eds-220-course/
+
+## License
+
+This project is licensed under the terms included in the LICENSE file.
+
+---
+
+*This project is part of the curriculum for the Master of Environmental Data Science program at the Bren School of Environmental Science & Management, UC Santa Barbara.*
