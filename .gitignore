@@ -161,7 +161,9 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-data/*
+# Add specific data files
+data/Spill_Incidents_20251118.csv
+data/tl_2023_us_county.zip/*
 
 # VS Code
 .vscode/
